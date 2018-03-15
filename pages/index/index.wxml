@@ -1,0 +1,61 @@
+<view>
+  <!-- 头部，position-fixed  -->
+  <view class='header'>
+    <view class='header-icon headers'>
+      <image src='/static/images/logo.png'/>
+    </view>
+    <view class='header-titile headers'>Mr.Ten</view>
+    <view class='header-icon headers'>
+      <image src='/static/images/search.png' />
+    </view>
+  </view>
+  <!-- 轮播  -->
+  <view class='carous'>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{imgUrls}}" wx:key>
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 定位  -->
+  <view class='map'>
+    <view class='map-image left maps'>
+      <image src='/static/images/map/map.png' />
+    </view>
+    <view class='map-text maps'>
+      <text>{{mapName}}</text>
+    </view>
+    <view class='map-image right maps'>
+      <image src='/static/images/map/omitted.png' />
+    </view>
+  </view>
+  <!-- 商品分类  -->
+  <view class='commodity'>
+    <view class='sort' wx:for='{{commoditys}}' wx:key>
+      <view><image src='{{item.image}}' /></view>
+      <view class='intro'>
+        <text class='name'>{{item.name}}</text>
+        <text class='memo'>{{item.memo}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品列表  -->
+  <view class='commoditys'>
+    <view class='commodity-list' wx:for='{{commodityList}}' wx:key>
+      <view class='image'>
+        <image src='{{item.image}}' />
+      </view>
+      <view class='detail'>
+        <text class='name'>{{item.name}}</text>
+        <text class='memo'>{{item.memo}}</text>
+        <view>
+          <text class='price'>￥{{item.price}}</text>
+          <text class='unit'> /  {{item.unit}}</text>
+          <text class='stock'> (库存{{item.stock}})</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

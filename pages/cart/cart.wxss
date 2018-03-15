@@ -1,0 +1,134 @@
+/* pages/cart/cart.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+/* 头部  */
+.header {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFF100;
+  position: fixed;
+  z-index: 2;
+}
+.header .headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.header .header-titile {
+  width:75%;
+}
+.header .header-icon {
+  width:15%;
+}
+.header .header-icon image {
+  width:25px;
+  height:25px;
+}
+
+/* 收货地址  */
+.cart-address {
+  width: 100%;
+  height: 120rpx;
+  padding-top: 2.5rem;
+  padding-left: 27rpx;
+  padding-right: 27rpx;
+  border-bottom: 4px solid #eeeeee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart-address .image image {
+  width:36rpx;
+  height:38rpx;
+}
+.cart-address .information {
+  margin-left: 27rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-address .information .personal-infor .name {
+  font-size: 18px;
+  font-weight: 600;
+}
+.cart-address .information .personal-infor .sex {
+  margin-left: 27rpx;
+  margin-right: 27rpx;
+  font-size: 16px;
+}
+.cart-address .information .personal-infor .phone {
+  font-size: 16px;
+}
+.cart-address .information .personal-address {
+  display: flex;
+  flex-direction: column;
+}
+.cart-address .information .personal-address .address {
+  font-size: 13px;
+  color: #888888;
+}
+.cart-address .image {
+  margin-left: auto;
+  margin-right:54rpx;
+}
+/* 单个商品  */
+.commodity-single {
+  width:100%;
+  height:183rpx;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+.commodity-single .image image {
+  width:145rpx;
+  height:145rpx;
+}
+.commodity-single .list-intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list-intro .name {
+  font-size: 16px;
+}
+.list-intro .price {
+  font-size: 12px;
+  color: #EFA50A;
+  margin: 9rpx 0 0 0;
+}
+.list-intro .unti {
+  height:50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+.list-intro .unti .stock {
+  font-size: 12px;
+  color: #888888;
+}
+.list-intro .unti .amount {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  margin-right:54rpx;
+}
+.list-intro .unti .amount .num {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  padding-bottom: 2rpx;
+}
+.list-intro .unti .amount .add-sub {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

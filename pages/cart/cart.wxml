@@ -1,0 +1,58 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <!-- 头部，position-fixed  -->
+  <view class='header'>
+    <view class='header-icon headers'>
+      <image src='/static/images/logo.png' />
+    </view>
+    <view class='header-titile headers'>购物车</view>
+    <view class='header-icon headers'>
+      <image src='/static/images/search.png' />
+    </view>
+  </view>
+
+  <!-- 默认收货地址  -->
+  <view class='cart-address'>
+    <view class='image'>
+      <image src='/static/images/map/mapY.png' />
+    </view>
+    <view class='information'>
+      <view class='personal-infor'>
+        <text class='name'>{{infor.name}}</text>
+        <text class='sex'>{{infor.sex}}</text>
+        <text class='phone'>{{infor.phone}}</text>
+      </view>
+
+      <view class='personal-address'>
+        <text class='address'>{{infor.address}}</text>
+      </view>
+    </view>
+    <view class='image'>
+      <view class='image'>
+        <image src='/static/images/map/arrowRight.png' />
+      </view>
+    </view>
+  </view>
+
+  <!-- 配送时间  -->
+  <view></view>
+
+  <!-- 购物车商品  -->
+  <view class='commodity-single' wx:for='{{commodity}}' wx:key>
+    <view class='image'>
+      <image src='{{item.image}}' />
+    </view>
+    <view class='list-intro'>
+      <text class='name'>{{item.name}}</text>
+      <text class='price'>￥{{item.price}}</text>
+      <view class='unti'>
+        <text class='stock'>规格：{{item.stock}}</text>
+        <view class='amount'>
+          <image src='/static/images/less.png' class='add-sub' wx:if='{{item.less}}' bindtap='lessClick' data-key='{{item.id}}' />
+          <text class='num' wx:if='{{item.numState}}'>{{item.num}}</text>
+          <image src='/static/images/add.png' class='add-sub' wx:if='{{item.add}}' bindtap='addClick' data-key='{{item.id}}' />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/order/order.wxml-->
+<view>
+  <!-- 头部，position-fixed  -->
+  <view class='header'>
+    <view class='header-icon headers'>
+      <image src='/static/images/logo.png' />
+    </view>
+    <view class='header-titile headers'>订单</view>
+    <view class='header-icon headers'>
+      <image src='/static/images/search.png' />
+    </view>
+  </view>
+
+  <!-- 订单列表  -->
+  <view class='order-list'>
+    <view class='order-single' wx:for='{{orderList}}' wx:key>
+      <view class='image'>
+        <image src='/static/images/list.png'/>
+      </view>
+      <view class='single-into'>
+        <view><text class='name'>{{item.name}}</text></view>
+        <view><text class='time'>{{item.time}}</text></view>
+        <view><text class='way'>{{item.way}}</text></view>
+      </view>
+    </view>
+  </view>
+
+</view>
